@@ -1,0 +1,610 @@
+@charset "UTF-8";
+
+
+/* Regras Globais */
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+h1, h2, h3 , h4, h5, h6 {
+    color: var(--preto);
+}
+
+/* Variáveis */
+
+:root {
+    --preto: #1B1B1B;
+    --cinza: #2B2C28;
+    --rosa: #F67C92;
+    --rosa-claro: #FAB3C4;
+}
+
+
+/* Cabeçalho */
+
+header {
+    height: 100vh;
+    background: url(./imagens/background.png) center;
+    background-size: cover;
+}
+
+.container {
+    margin: 0 100px;
+}
+
+.logo {
+    margin-top: 30px;
+    width: 100px;
+}
+
+.header-texto {
+    max-width: 400px;
+    margin-top: 140px;
+}
+
+h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+.circle {
+    height: 12px;
+    width: 12px;
+    display: inline-block;
+    background: var(--rosa);
+    border-radius: 30px;
+}
+
+.botao-comum {
+    padding: 18px 40px;
+    background: transparent;
+    outline: none;
+    border: 2px solid var(--rosa);
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color .3s;
+}
+
+.botao-comum:hover {
+    background-color: var(--rosa);
+    color: #1B1B1B;
+}
+
+p {
+    color: var(--cinza);
+}
+
+.header-texto button {
+    margin: 20px 0 60px 0;
+}
+
+.linhas {
+    line-height: 3px;
+}
+
+.linha-1, .linha-2, .linha-3 {
+    background: var(--rosa);
+    display: inline-block;
+    border-radius: 30px;
+}
+
+.linha-1 {
+    width: 15px;
+    height: 15px;
+}
+
+.linha-2 {
+    width: 70px;
+    height: 3px;
+}
+
+.linha-3 {
+    width: 50px;
+    height: 3px;
+}
+
+#navMenu {
+    width: 250px;
+    height: 100vh;
+    position: fixed;
+    right: -250px;
+    top: 0;
+    background-color: var(--rosa);
+    z-index: 10;
+    transition: right .3s;
+}
+
+#navMenu ul li {
+    list-style: none;
+    margin: 50px 20px;
+}
+
+#navMenu ul li a {
+    text-decoration: none;
+    color: #FFF;
+}
+
+#botaoMenu {
+    width: 50px;
+    position: fixed;
+    right: 65px;
+    top: 35px;
+    z-index: 10;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+
+/* Seção Sobre */
+
+#sobre, #ofertas {
+    padding: 50px 0;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+#sobre .col-esquerda, .col-direita {
+    flex-basis: 50%;
+}
+
+#sobre .col-esquerda img {
+    width: 100%;
+}
+
+#sobre .col-direita {
+    text-align: right;
+    width: 100%;
+}
+
+.sobre-texto {
+    max-width: 500px;
+    display: inline-block;
+    margin-right: 100px;
+}
+
+h2 {
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+.sobre-texto h3 {
+    font-size: 1.3em;
+    margin: 10px 0 10px 0;
+    font-style: italic;
+}
+
+.sobre-texto h4 {
+    font-style: italic;
+    color: var(--cinza);
+}
+
+
+/* Seção Especificações */
+
+#specs {
+    padding: 50px 0;
+
+}
+
+.specs-linha {
+    width: 100%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.specs-col {
+    flex-basis: 20%;
+    text-align: center;
+}
+
+.specs-col img {
+    width: 150px;
+}
+
+.specs-col h4 {
+    font-weight: bold;
+    font-size: 1.4em;
+    margin-bottom: 20px;
+}
+
+.specs-botao {
+    display: flex;
+    justify-content: center;
+    margin: 50px auto;
+    text-align: right;
+    align-items: center;
+}
+
+.specs-botao .linhas {
+    margin-right: 10px;
+}
+
+
+/* Cursos */
+
+#cursos {
+    padding: 50px 0;
+}
+
+.linha-cursos {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+#cursos .col-esquerda, .col-direita {
+    flex-basis: 50%;
+}
+
+#cursos .col-direita img {
+    width: 100%;
+}
+
+.cursos-texto {
+    max-width: 350px;
+}
+
+.cursos-texto button {
+    margin: 30px 0;
+}
+
+
+/* Ofertas */
+
+#ofertas .col-direita, .col-esquerda {
+    flex-basis: 50%;
+}
+
+#ofertas .col-esquerda img {
+    width: 100%;
+}
+
+#ofertas .col-direita {
+    text-align: right;
+}
+
+#ofertas button {
+    margin: 30px 0;
+}
+
+
+/* Contato */
+
+#contato {
+    padding: 50px 0;
+}
+
+.linha-contato {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.contato-col-esquerda, .contato-col-direita {
+    flex-basis: 50%;
+}
+
+.contato-col-direita img {
+    width: 100%;
+}
+
+form {
+    max-width: 350px;
+    margin: 30px 0;
+}
+
+form input {
+    width: 100%;
+    padding: 12px 10px; 
+    margin-bottom: 5px;
+    outline: none;
+    box-sizing: border-box;
+    border: 2px solid var(--rosa);
+    border-radius: 5px;
+}
+
+.botao-box {
+    display: flex;
+    justify-content: space-between;
+}
+
+.botao-box button {
+    padding: 15px 35px;
+}
+
+#contato .linhas {
+    margin: 30px 0;
+}
+
+
+/* Rodapé */
+
+footer {
+    padding-top: 50px;
+}
+
+hr {
+    width: 100%;
+    border: 1px solid var(--rosa);
+}
+
+.linha-rodape {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.rodape-col {
+    flex-basis: 100%;
+    margin-top: 20px;
+}
+
+.links-rodape {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding-bottom: 40px;
+}
+
+.titulo-link h4 {
+    color: var(--rosa);
+    margin-bottom: 10px;
+}
+
+.titulo-link small {
+    font-size: 0.9em;
+    font-weight: bold;
+    color: rgba(0, 0, 0, .7);
+    cursor: pointer;
+}
+
+.info-rodape {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.linha-final {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    background-color: var(--rosa);
+}
+
+.linha-final a {
+    color: var(--preto);
+}
+
+
+/*Ícones Mídias Sociais*/
+
+.icones-midias-sociais {
+    width: 50px;
+    position: fixed;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    z-index: 1;
+}
+
+.icones-midias-sociais img {
+    display: block;
+    width: 20px;
+    margin: 0px auto 15px auto;
+    cursor: pointer;
+}
+
+
+/* Responsividade */
+
+@media only screen and (max-width: 770px) {
+    
+    /* Regras Globais*/
+
+    * {
+        font-size: 15px;
+    }
+
+
+    /* Cabeçalho */
+
+    header {
+        background-image: none;
+        height: 550px;
+    }
+
+    .container {
+        margin: 0 50px;
+    }
+    
+    .logo {
+        margin-top: 27px;
+        width: 70px;
+    }
+
+    #navMenu {
+        width: 200px;
+        height: 100vh;
+        position: fixed;
+        right: -200px;
+        top: 0;
+        background-color: var(--rosa);
+        z-index: 10;
+        transition: right .3s;
+    }
+    
+    .header-texto {
+        margin-top: 100px;
+        min-width: 290px;
+    }
+
+    .header-texto .botao-comum {
+        padding: 10px 20px;
+        margin-bottom: 30px;
+    }
+    
+    h1 {
+        font-size: 2em;
+        margin: 0px auto 10px auto;
+    }
+
+    #botaoMenu {
+        width: 35px;
+        right: 50px;
+    }
+
+    .icones-midias-sociais img {
+        width: 22px;
+        margin: 15px auto;
+    }
+
+
+    /* Seção Sobre */
+
+    #sobre .col-esquerda, .col-direita {
+        flex-basis: 100%;
+    }
+
+    .sobre-texto {
+        margin: 50px 20px 0;
+        max-width: 290px;
+        font-size: 15px;
+    }
+    
+    .sobre-texto h2 {
+        font-size: 1.8em;
+        margin-bottom: 10px;
+    }
+
+    .sobre-texto h3 {
+        line-height: 20px;
+    }
+
+    .linha-1 {
+        width: 15px;
+        height: 15px;
+    }
+    
+    .linha-2 {
+        width: 50px;
+        height: 3px;
+    }
+    
+    .linha-3 {
+        width: 30px;
+        height: 3px;
+    }
+
+
+    /* Especificações */
+
+    .specs-col {
+        flex-basis: 100%;
+        text-align: center;
+        padding: 30px;
+    }
+
+    .specs-col img {
+        width: 100px;
+    }
+
+    .botao-spec {
+        padding: 10px 20px;
+    }
+
+
+    /* Cursos */
+
+    #cursos .col-esquerda, .col-direita {
+        flex-basis: 100%;
+    }
+
+    #cursos .col-direita {
+        width: 100%;
+        margin: 30px 0px 0px 0px;
+    }
+
+    #cursos button {
+        padding: 10px 20px;
+    }
+
+    /* Ofertas */
+
+    #ofertas .col-direita, .col-esquerda {
+        flex-basis: 100%;
+    }
+
+    #ofertas button {
+        padding: 10px 20px;
+    }
+
+
+    /* Contato */
+
+    .contato-col-esquerda, .contato-col-direita {
+        flex-basis: 100%;
+    }
+
+    #contato .circle {
+        opacity: 0;
+    }
+    
+    form {
+        width: 280px;
+    }
+
+    form input {
+        width: 100%;
+        padding: 10; 
+        border: 2px solid var(--rosa);
+        border-radius: 5px;
+    }
+    
+    .botao-box {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+    }
+    
+    .botao-box .botao-1 {
+        padding: 5px 20px;
+        font-size: 1em;
+        margin-right: 10px;
+    }
+
+    .botao-box .botao-2 {
+        padding: 5px 20px;
+        font-size: 1em;
+    }
+
+    .contato-col-direita {
+        margin-top: 30px;
+    }
+
+
+    /* Rodapé */
+
+    .rodape-col {
+        flex-basis: 100%;
+    }
+
+    .titulo-link {
+        flex-basis: 50%;
+        padding: 20px 0;
+    }
+
+
+}
